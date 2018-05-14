@@ -1,10 +1,11 @@
-# Angular and Microservices: The [ScynettGhana](http://scynett-ghana.com) approach to microservices
+# Angular and Microservices: The [ScynettGhana](http://scynett-ghana.com) approach to microfrontend
+
 ### How to get the examples running locally
 ```bash
 git clone git@github.com:PlaceMe-SAS/single-spa-angular-cli-examples.git
-cd single-spa-angular-cli-examples
-npm install -g @angular/cli
-npm install
+cd scynett-mircofrontend
+npm install -g @angular/cli yarn
+yarn
 npm run ng:build
 npm start
 ```
@@ -24,7 +25,7 @@ cd app1
 ng serve --port=4202
 ```
 
-### Configure your Angular Cli App to be loaded by single spa
+### Configure your Angular-Cli App to be loaded by single spa
 ```js
 // microapps/<app-name>/src/main.ts
 
@@ -39,7 +40,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformSingleSpa.mount('app1').subscribe(({ props, attachUnmount }) => {
+platformSingleSpa.mount('<app-name>').subscribe(({ props, attachUnmount }) => {
   platformBrowserDynamic().bootstrapModule(AppModule).then((module) => {
     attachUnmount(module);
     // Do something with props if you want
@@ -51,7 +52,6 @@ platformSingleSpa.mount('app1').subscribe(({ props, attachUnmount }) => {
 ### Configure your angular cli applications
 ```js
 // portal/microapps.config.json
-
 [
     {
         "name": "menu",
@@ -75,4 +75,6 @@ platformSingleSpa.mount('app1').subscribe(({ props, attachUnmount }) => {
     ...
 ]
 ```
+
+Thanks to [PlaceMe-SAS](https://github.com/PlaceMe-SAS/single-spa-angular-cli-examples) for making this possible.
 
