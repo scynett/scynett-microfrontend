@@ -1,0 +1,15 @@
+[
+    {
+        "name": "menu",
+        "selector": "menu-root",
+        "baseHref": "/menu",
+        "matchRoute": "/**"
+    },
+    {
+        "name": "home",
+        "selector": "home-root",
+        "baseHref": "/home",
+        "matchRoute": "/home/",
+        "isDefaultApp": true
+    }
+]
