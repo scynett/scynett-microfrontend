@@ -1,8 +1,8 @@
-# Angular and Microservices: The [ScynettGhana](http://scynett-ghana.com) approach to microfrontend
+# The [ScynettGhana](http://scynett-ghana.com) approach to microfrontend and Angular
 
 ### How to get the examples running locally
 ```bash
-git clone git@github.com:PlaceMe-SAS/single-spa-angular-cli-examples.git
+git clone https://gitlab.com/eddyamewu/scynett-microfrontend.git
 cd scynett-mircofrontend
 npm install -g @angular/cli yarn
 yarn
@@ -19,9 +19,9 @@ npm run ng:test
 ## Add an Angular CLI apps
 ### Create Angular CLI standard app
 ```bash
-cd apps
+cd microapps
 ng new <app-name> --prefix=<app-name>
-cd app1
+cd <app-name>
 ng serve --port=4202
 ```
 

@@ -4,10 +4,10 @@
   "description":
     "This is an example of example on how to use [single-spa](https://github.com/CanopyTax/single-spa) && [single-spa-angular-cli](https://github.com/PlaceMe-SAS/single-spa-angular-cli) in a variety of contexts.",
   "scripts": {
-    "preinstall": "cd ./microapps/menu && yarn && cd ../home && yarn",
-    "ng:lint": "cd ./microapps/menu && ng lint && cd ../home && ng lint",
-    "ng:test": "cd ./microapps/menu && ng test --watch=false && cd ../home && ng test --watch=false",
-    "ng:build": "cd ./microapps/menu && ng build --prod -op ../../build/menu && cd ../home && ng build --prod -op ../../build/home",
+    "preinstall": "cd ./microapps/menu && yarn && cd ../home && yarn && cd ../accounts && yarn",
+    "ng:lint":    "cd ./microapps/menu && ng lint && cd ../home && ng lint && cd ../accounts && ng lint",
+    "ng:test":    "cd ./microapps/menu && ng test --watch=false && cd ../home && ng test --watch=false && cd ../accounts && ng test --watch=false",
+    "ng:build":   "cd ./microapps/menu && ng build --prod -op ../../build/menu && cd ../home && ng build --prod -op ../../build/home && cd ../accounts && ng build --prod -op ../../build/accounts",
     "start": "webpack-dev-server --open",
     "build": "webpack --config webpack.config.js"
   },

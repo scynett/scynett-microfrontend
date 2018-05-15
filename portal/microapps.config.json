@@ -11,5 +11,11 @@
         "baseHref": "/home",
         "matchRoute": "/home/",
         "isDefaultApp": true
+    },
+    {
+        "name": "accout",
+        "selector": "accout-root",
+        "baseHref": "/accout",
+        "matchRoute": "/accout/"
     }
 ]
