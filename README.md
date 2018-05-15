@@ -1,10 +1,11 @@
 # The [ScynettGhana](http://scynett-ghana.com) approach to microfrontend and Angular
 
+
 ### How to get the examples running locally
 ```bash
 git clone https://gitlab.com/eddyamewu/scynett-microfrontend.git
 cd scynett-mircofrontend
-npm install -g @angular/cli yarn
+npm install -g @angular/cli@1.7.4 yarn
 yarn
 npm run ng:build
 npm start
@@ -15,6 +16,7 @@ npm start
 npm run ng:lint
 npm run ng:test
 ``` -->
+___
 
 ## Add an Angular CLI apps
 ### Create Angular CLI standard app
@@ -47,6 +49,23 @@ platformSingleSpa.mount('<app-name>').subscribe(({ props, attachUnmount }) => {
     // Ex : module.instance.setSomething(...)
   });
 });
+```
+
+### Remove Zone.js from the cli app bundle
+```js
+// <app-name>/src/polyfills.ts
+
+// Comment zone.js, it is globaly imported by the portal
+// import 'zone.js/dist/zone';  // Included with Angular CLI.
+```
+
+### Add Zone.js only for the cli app
+```html
+<!-- <app-name>/src/index.html -->
+
+  <app-name-root></app-anme-root>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.8.19/zone.js"></script>
+</body>
 ```
 
 ### Configure your angular cli applications

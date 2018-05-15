@@ -10,11 +10,9 @@ if (environment.production) {
 }
 
 platformSingleSpa.mount('home').subscribe(({ props, attachUnmount }) => {
-  platformBrowserDynamic()
-    .bootstrapModule(AppModule)
-    .then(module => {
-      attachUnmount(module);
-      // Do something with props if you want
-      // Ex : module.instance.setSomething(...)
-    });
+  platformBrowserDynamic().bootstrapModule(AppModule).then((module) => {
+    attachUnmount(module);
+    // Do something with props if you want
+    // Ex : module.instance.setSomething(...)
+  });
 });

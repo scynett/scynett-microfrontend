@@ -11,6 +11,9 @@ for (const application of applications) {
         (() => {
             const lifecycles = loader({
                 name: application.name,
+
+
+                
                 selector: application.selector,
                 baseHref: application.baseHref
             });
