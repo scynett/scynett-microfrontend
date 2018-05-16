@@ -6,26 +6,19 @@ import 'zone.js';
 const applications = require('./microapps.config.json');
 
 for (const application of applications) {
-    registerApplication(
-        application.name,
-        (() => {
-            const lifecycles = loader({
-                name: application.name,
-
-
-                
-                selector: application.selector,
-                baseHref: application.baseHref
-            });
-            return {
-                bootstrap: [lifecycles.bootstrap],
-                mount: [lifecycles.mount],
-                unmount: [lifecycles.unmount],
-                unload: [lifecycles.unload],
-            };
-        })(),
-        router.matchRoute(application.matchRoute, application.isDefaultApp)
-    );
+    registerApplication(application.name, (() => {
+        const lifecycles = loader({
+            name: application.name,
+            selector: application.selector,
+            baseHref: application.baseHref
+        });
+        return {
+            bootstrap: [lifecycles.bootstrap],
+            mount: [lifecycles.mount],
+            unmount: [lifecycles.unmount],
+            unload: [lifecycles.unload],
+        };
+    })(), router.matchRoute(application.matchRoute, application.isDefaultApp));
 }
 
 start();

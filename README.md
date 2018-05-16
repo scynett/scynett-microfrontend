@@ -1,6 +1,5 @@
 # The [ScynettGhana](http://scynett-ghana.com) approach to microfrontend and Angular
 
-
 ### How to get the examples running locally
 ```bash
 git clone https://gitlab.com/eddyamewu/scynett-microfrontend.git

@@ -9,13 +9,13 @@
         "name": "home",
         "selector": "home-root",
         "baseHref": "/home",
-        "matchRoute": "/home/"
+        "matchRoute": "/home/",
+        "isDefaultApp": true
     },
     {
         "name": "accounts",
         "selector": "accounts-root",
         "baseHref": "/accounts",
-        "matchRoute": "/accounts/",
-        "isDefaultApp": true
+        "matchRoute": "/accounts/"
     }
 ]
