@@ -93,6 +93,6 @@ platformSingleSpa.mount('<app-name>').subscribe(({ props, attachUnmount }) => {
     ...
 ]
 ```
-
-Thanks to [PlaceMe-SAS](https://github.com/PlaceMe-SAS/single-spa-angular-cli-examples) for making this possible.
+<!-- Thanks to [PlaceMe-SAS](https://github.com/PlaceMe-SAS/single-spa-angular-cli-examples) for making this possible. -->
+Thanks to [Single-Spa-Cli](https://www.npmjs.com/package/single-spa-angular-cli) for making this possible.
 
