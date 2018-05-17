@@ -7,7 +7,7 @@
     "preinstall": "cd ./microapps/menu && yarn && cd ../home && yarn && cd ../accounts && yarn",
     "ng:lint":    "cd ./microapps/menu && ng lint && cd ../home && ng lint && cd ../accounts && ng lint",
     "ng:test":    "cd ./microapps/menu && ng test --watch=false && cd ../home && ng test --watch=false && cd ../accounts && ng test --watch=false",
-    "ng:build":   "cd ./microapps/menu && ng build --prod --output-path ../../build/menu && cd ../home && ng build --prod --output-path ../../build/home && cd ../accounts && ng build --prod --output-path ../../build/accounts",
+    "ng:build":   "cd ./microapps/menu && ng build --aot=false --prod --output-path ../../build/menu && cd ../home && ng build --aot=false --prod --output-path ../../build/home && cd ../accounts && ng build --aot=false --prod --output-path ../../build/accounts && cd ../projects && ng build --aot=false --prod --output-path ../../build/projects",
     "start": "webpack-dev-server --open",
     "build": "webpack --config webpack.config.js"
   },

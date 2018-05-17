@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-// import { SingleSpaModule } from 'single-spa-angular-cli/angular';
+import { SingleSpaModule } from 'single-spa-angular-cli/angular';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SingleSpaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

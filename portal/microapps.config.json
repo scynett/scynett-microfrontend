@@ -17,5 +17,11 @@
         "selector": "accounts-root",
         "baseHref": "/accounts",
         "matchRoute": "/accounts/"
+    },
+    {
+        "name": "projects",
+        "selector": "projects-root",
+        "baseHref": "/projects",
+        "matchRoute": "/projects/"
     }
 ]
